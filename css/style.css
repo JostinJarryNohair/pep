@@ -12,6 +12,8 @@
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     --border-radius: 0px; /* Sharp corners for modern look */
     --border-radius-small: 4px;
+    --heading-font: 'Cormorant Garamond', serif;
+    --body-font: 'Montserrat', sans-serif;
 }
 
 * {
@@ -21,7 +23,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--body-font);
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.6;
@@ -47,7 +49,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--heading-font);
     font-weight: 700;
     margin-bottom: 15px;
     letter-spacing: -0.5px;
@@ -69,11 +71,12 @@ ul {
 }
 
 .section-title {
+    font-family: var(--heading-font);
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
     position: relative;
-    display: inline-block;
-    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .section-title::after {
@@ -200,28 +203,21 @@ header .container {
 }
 
 .logo h1 {
+    font-family: var(--heading-font);
     font-size: 2.5rem;
-    margin-bottom: 0;
-    color: var(--text-color);
-    position: relative;
-    display: inline-block;
-}
-
-.logo h1::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: var(--primary-color);
-    transform: skewX(-20deg);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    letter-spacing: 2px;
 }
 
 .tagline {
-    font-size: 0.9rem;
+    font-family: var(--heading-font);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.1rem;
     color: var(--light-text);
-    margin-bottom: 0;
+    letter-spacing: 1px;
 }
 
 .contact-info {
@@ -318,26 +314,20 @@ nav {
 }
 
 .hero-content h2 {
+    font-family: var(--heading-font);
     font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.2;
     margin-bottom: 20px;
-    line-height: 1.1;
-    text-transform: uppercase;
-    position: relative;
-}
-
-.hero-content h2::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 80px;
-    height: 5px;
-    background: var(--primary-color);
+    letter-spacing: 1px;
 }
 
 .hero-content p {
+    font-family: var(--body-font);
     font-size: 1.2rem;
+    font-weight: 300;
     margin-bottom: 30px;
+    max-width: 600px;
 }
 
 /* Featured Products */
@@ -409,15 +399,18 @@ nav {
     background: var(--primary-color);
 }
 
-.product-card h3 {
+.product-card-content h3 {
+    font-family: var(--heading-font);
     font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
-.product-card p {
-    margin-bottom: 20px;
+.product-card-content p {
     color: var(--light-text);
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 /* About Section */
@@ -440,6 +433,16 @@ nav {
 
 .about-image .image-frame {
     background-color: #1e1e1e;
+}
+
+.about-content .highlight-text {
+    font-family: var(--heading-font);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    line-height: 1.5;
 }
 
 /* Services Section */
@@ -515,10 +518,11 @@ nav {
 }
 
 .service-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    text-align: center;
-    text-transform: uppercase;
+    font-family: var(--heading-font);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 15px 0 10px;
+    color: var(--primary-color);
 }
 
 .service-card p {
@@ -547,6 +551,14 @@ nav {
 
 .custom-image .image-frame {
     background-color: #1e1e1e;
+}
+
+.custom-content h2 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 /* Contact Section */
@@ -644,9 +656,12 @@ nav {
 }
 
 .block-content h3 {
-    font-size: 1.1rem;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    font-weight: 600;
     margin-bottom: 12px;
     color: var(--primary-color);
+    letter-spacing: 0.5px;
 }
 
 .block-content p {
@@ -681,8 +696,11 @@ nav {
 }
 
 .form-header h2 {
+    font-family: var(--heading-font);
     font-size: 1.8rem;
+    font-weight: 600;
     margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
 .contact-form {
@@ -709,7 +727,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.05);
     color: var(--text-color);
     border-radius: var(--border-radius-small);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--body-font);
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -733,9 +751,6 @@ nav {
 
 .form-submit .btn {
     min-width: 150px;
-}
-.btn{
-    color: var(--text-color);
 }
 
 /* Responsive Styles */
@@ -888,7 +903,9 @@ nav {
         margin-bottom: 15px;
     }
  
-    .btn, .btn-outline {
+    /* Mobile button styles */
+    .btn, 
+    .btn-outline {
         padding: 10px 20px;
         font-size: 0.9rem;
         display: flex;
