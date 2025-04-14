@@ -235,7 +235,7 @@ header .container {
     display: flex;
     align-items: center;
     padding: 8px 15px;
-    background-color: rgba(255, 107, 53, 0.1);
+    background-color: var(--accent-color);
     border-radius: var(--border-radius-small);
 }
 
@@ -787,8 +787,11 @@ nav {
     }
     
     .contact-info {
-        margin: 15px 0;
+        display: none;
+      
     }
+    
+  
     
     .menu-toggle {
         display: flex;
@@ -910,6 +913,7 @@ nav {
     .form-group textarea {
         padding: 12px;
     }
+ 
 }
 
 /* Footer */
