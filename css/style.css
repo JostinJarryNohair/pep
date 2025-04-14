@@ -792,7 +792,9 @@ nav {
     }
     
   
-    
+    .about-image {
+       display: none;
+    }
     .menu-toggle {
         display: flex;
         position: absolute;
@@ -885,10 +887,12 @@ nav {
     .block-icon {
         margin-bottom: 15px;
     }
-    
+ 
     .btn, .btn-outline {
         padding: 10px 20px;
         font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
     }
 }
 
