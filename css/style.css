@@ -1,8 +1,8 @@
 /* Base Styles */
 :root {
-    --primary-color: #ff6b35; /* Vibrant orange */
+    --primary-color: #aca21577; /* Vibrant orange */
     --secondary-color: #2e2e2e; /* Dark gray */
-    --accent-color: #ee732c; /* Neon teal accent */
+    --accent-color: #050505; /* Neon teal accent */
     --background-color: #121212; /* Very dark background */
     --card-background: #1e1e1e; /* Slightly lighter dark for cards */
     --text-color: #ffffff; /* White text */
