@@ -255,25 +255,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setPlaceholderImages();
 
-    // Typing effect for tagline
-    const createTypingEffect = () => {
-        const tagline = document.querySelector('.tagline');
-        if (tagline) {
-            const text = tagline.textContent;
-            tagline.textContent = '';
-            
-            let i = 0;
-            const typeWriter = () => {
-                if (i < text.length) {
-                    tagline.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                }
-            };
-            
-            setTimeout(typeWriter, 1000);
-        }
-    };
-    
-    createTypingEffect();
+
 });
